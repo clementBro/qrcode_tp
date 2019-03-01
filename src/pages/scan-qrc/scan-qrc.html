@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>scan QRcode</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item *ngIf="qrCodeData">
+        <label>the message is :</label>
+        {{qrCodeData}}
+    </ion-item>
+
+    <div>
+        <ion-item>
+            <button full ion-button (click)="scanWithCamera()">Caméra</button>
+        </ion-item>
+        <ion-item>
+            <button full ion-button (click)="importFile()">Import</button>
+        </ion-item>
+    </div>
+
+
+</ion-content>
